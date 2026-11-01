@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Eksperimen: Pendaftaran Workshop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mini Eksperimen DOM & Event</h1>
+
+        <!-- Fitur Toggle Tampilkan/Sembunyikan Paragraf -->
+        <section class="card">
+            <h2>Kontrol Tampilan Paragraf</h2>
+            <button id="btnToggle" type="button" class="btn-secondary">Sembunyikan Paragraf</button>
+            <p id="paragrafTarget" class="mt-10">Paragraf ini dapat disembunyikan atau ditampilkan kembali menggunakan manipulasi class CSS.</p>
+        </section>
+
+        <!-- Live Character Counter -->
+        <section class="card">
+            <h2>Penghitung Karakter Langsung</h2>
+            <label for="namaInput">Nama Panggilan:</label>
+            <input type="text" id="namaInput" maxlength="40" placeholder="Ketik sesuatu...">
+            <p class="info-text mt-10">Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+        </section>
+
+        <!-- Form Pendaftaran Workshop -->
+        <section class="card">
+            <h2>Form Pendaftaran Workshop</h2>
+            <form id="formWorkshop" novalidate>
+                <div class="form-group">
+                    <label for="namaLengkap">Nama Lengkap (Minimal 3 Karakter):</label>
+                    <input type="text" id="namaLengkap" name="nama">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailWorkshop">Email:</label>
+                    <input type="email" id="emailWorkshop" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="pilihanSesi">Pilihan Sesi Workshop:</label>
+                    <select id="pilihanSesi" name="sesi">
+                        <option value="">-- Pilih Sesi Workshop --</option>
+                        <option value="Sesi 1: Dasar HTML & CSS">Sesi 1: Dasar HTML & CSS (Pagi)</option>
+                        <option value="Sesi 2: JavaScript DOM Lanjutan">Sesi 2: JavaScript DOM Lanjutan (Siang)</option>
+                        <option value="Sesi 3: Proyek Web Interaktif">Sesi 3: Proyek Web Interaktif (Sore)</option>
+                    </select>
+                    <p class="preview-sesi">Sesi terpilih: <span id="infoSesi">-</span></p>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Daftar Sekarang</button>
+                    <button type="reset" id="btnReset" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+            <p id="pesanForm" class="pesan-feedback" aria-live="polite"></p>
+        </section>
+
+        <!-- To-Do List dengan Tombol Hapus Satuan -->
+        <section class="card">
+            <h2>Daftar Tugas (To-Do List)</h2>
+            <div class="form-group">
+                <label for="inputTugas">Tugas baru:</label>
+                <input id="inputTugas" type="text" placeholder="Masukkan tugas...">
+                <button id="tambahTugas" type="button" class="btn-primary mt-10">Tambah Tugas</button>
+            </div>
+            <p id="pesanTugas" class="pesan-feedback" aria-live="polite"></p>
+            <ul id="daftarTugas"></ul>
+        </section>
+    </div>
+
+</body>
+</html>
