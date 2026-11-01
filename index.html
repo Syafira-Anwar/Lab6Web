@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum DOM dan Event</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Bagian 1: Pengenalan DOM -->
+    <h1 id="judul">Latihan DOM</h1>
+    <p id="pesan">Belum ada tindakan.</p>
+    <button id="tombolAksi" type="button">Klik Saya</button>
+
+    <hr>
+
+    <!-- Bagian 2: Toggle CSS Class -->
+    <button id="tombolGaya" type="button">Ubah Gaya Teks</button>
+    <p id="teksGaya">Teks ini akan berubah gayanya saat tombol diklik.</p>
+
+    <hr>
+
+    <!-- Bagian 3: Live Input Karakter -->
+    <div>
+        <label for="namaInput">Nama:</label>
+        <input type="text" id="namaInput" maxlength="40" placeholder="Ketik sesuatu...">
+        <p>Jumlah karakter: <span id="jumlahKarakter">0</span></p>
+    </div>
+
+    <hr>
+
+    <!-- Bagian 4: Form Validasi -->
+    <form id="formPendaftaran" novalidate>
+        <div>
+            <label for="nama">Nama lengkap</label><br>
+            <input id="nama" name="nama" type="text">
+        </div>
+        <div>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email">
+        </div>
+        <div>
+            <label for="usia">Usia</label><br>
+            <input id="usia" name="usia" type="number" min="17" max="100">
+        </div>
+        <br>
+        <button type="submit">Daftar</button>
+    </form>
+    <p id="pesanForm" aria-live="polite"></p>
+
+    <hr>
+
+    <!-- Bagian 5: Aplikasi To-Do List Sederhana -->
+    <section>
+        <h2>Daftar Tugas</h2>
+        <label for="inputTugas">Tugas baru</label><br>
+        <input id="inputTugas" type="text" placeholder="Masukkan tugas...">
+        <button id="tambahTugas" type="button">Tambah</button>
+        <p id="pesanTugas" aria-live="polite"></p>
+        <ul id="daftarTugas"></ul>
+    </section>
+
+</body>
+</html>
